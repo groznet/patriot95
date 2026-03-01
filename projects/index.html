@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты — Патриот95 · Поисковый отряд Чеченской Республики</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="font-body text-ink leading-relaxed">
+
+    <!-- Load from components/header.html -->
+    <header id="header" class="container mx-auto p-4 border-double"></header>
+
+    <main class="container mx-auto p-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Основная колонка: список проектов -->
+        <div class="lg:col-span-2 space-y-8">
+            
+            <!-- Заголовок страницы -->
+            <section class="p-6 bg-white bg-opacity-70 border shadow-md">
+                <h1 class="font-headline text-4xl mb-4 pb-2 border-b border-dashed">
+                    <img src="/assets/images/icon-quill.png" alt="перо" class="inline-block w-8 h-8 mr-3 align-text-bottom">
+                    Наши проекты
+                </h1>
+                <p class="text-lg leading-relaxed">
+                    Мы реализуем долгосрочные инициативы, направленные на увековечение памяти, воспитание молодёжи 
+                    и возвращение имён павших героев. Каждый проект — это вклад в общее дело.
+                </p>
+            </section>
+
+            <!-- Проект 1: Вахта Памяти -->
+            <article class="bg-white bg-opacity-70 border shadow-sm p-6">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <figure class="md:w-1/3">
+                        <img src="/assets/images/project-vakhta.jpg" 
+                             alt="Вахта Памяти" 
+                             class="w-full h-auto object-cover mask-torn"
+                             style="height:150px;">
+                        <figcaption class="text-xs italic mt-1 text-stone-600">Полевой лагерь, 2024</figcaption>
+                    </figure>
+                    <div class="md:w-2/3">
+                        <h2 class="font-headline text-2xl mb-1">
+                            <span class="vintage-link font-bold">Вахта Памяти «Терек»</span>
+                        </h2>
+                        <p class="text-sm italic text-stone-600 mb-2">Ежегодная поисковая экспедиция</p>
+                        <p class="mb-3">
+                            Крупнейший полевой проект отряда. Поисковые работы в местах боёв на территории Чеченской Республики. 
+                            За два сезона подняты останки более 30 бойцов, у двоих установлены имена. 
+                            В экспедициях участвуют добровольцы из разных регионов.
+                        </p>
+                        <span class="inline-block bg-amber-800/10 text-amber-900 text-xs px-2 py-1 border border-amber-800/30">действующий</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Проект 2: Школа молодого поисковика -->
+            <article class="bg-white bg-opacity-70 border shadow-sm p-6">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <figure class="md:w-1/3">
+                        <img src="/assets/images/project-school.jpg" 
+                             alt="Занятия с молодёжью" 
+                             class="w-full h-auto object-cover mask-torn"
+                             style="height:150px;">
+                        <figcaption class="text-xs italic mt-1 text-stone-600">Лекция по архивному поиску</figcaption>
+                    </figure>
+                    <div class="md:w-2/3">
+                        <h2 class="font-headline text-2xl mb-1">
+                            <span class="vintage-link font-bold">Школа молодого поисковика «Патриот»</span>
+                        </h2>
+                        <p class="text-sm italic text-stone-600 mb-2">Образовательная программа для подростков</p>
+                        <p class="mb-3">
+                            Обучающий курс для школьников и студентов: основы полевой работы, архивное дело, 
+                            антропология и работа с базами данных. Выпускники школы участвуют в экспедициях в качестве стажёров.
+                        </p>
+                        <span class="inline-block bg-amber-800/10 text-amber-900 text-xs px-2 py-1 border border-amber-800/30">действующий</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Проект 3: Книга Памяти ЧР -->
+            <article class="bg-white bg-opacity-70 border shadow-sm p-6">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <figure class="md:w-1/3">
+                        <img src="/assets/images/project-book.jpg" 
+                             alt="Книга Памяти" 
+                             class="w-full h-auto object-cover mask-torn"
+                             style="height:150px;">
+                        <figcaption class="text-xs italic mt-1 text-stone-600">Электронная база данных</figcaption>
+                    </figure>
+                    <div class="md:w-2/3">
+                        <h2 class="font-headline text-2xl mb-1">
+                            <span class="vintage-link font-bold">Электронная Книга Памяти Чеченской Республики</span>
+                        </h2>
+                        <p class="text-sm italic text-stone-600 mb-2">Сводный архив погибших и пропавших без вести</p>
+                        <p class="mb-3">
+                            Оцифровка архивных документов, уточнение списков воинов, призванных из ЧР и погибших в годы ВОВ. 
+                            На данный момент в базу внесено более 5000 записей. Проект реализуется совместно с Архивной службой ЧР.
+                        </p>
+                        <span class="inline-block bg-amber-800/10 text-amber-900 text-xs px-2 py-1 border border-amber-800/30">в процессе</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Проект 4: Возвращение имён (грантовый) -->
+            <article class="bg-white bg-opacity-70 border shadow-sm p-6">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <figure class="md:w-1/3">
+                        <img src="/assets/images/project-names.jpg" 
+                             alt="Работа с медальонами" 
+                             class="w-full h-auto object-cover mask-torn"
+                             style="height:150px;">
+                        <figcaption class="text-xs italic mt-1 text-stone-600">Чтение солдатского медальона</figcaption>
+                    </figure>
+                    <div class="md:w-2/3">
+                        <h2 class="font-headline text-2xl mb-1">
+                            <span class="vintage-link font-bold">«Возвращение имён»</span>
+                        </h2>
+                        <p class="text-sm italic text-stone-600 mb-2">Проект при поддержке Фонда президентских грантов</p>
+                        <p class="mb-3">
+                            Комплексная программа по идентификации неопознанных останков, найденных в ходе экспедиций. 
+                            Включает антропологические исследования и ДНК-анализ. За 2024 год установлено 8 имён.
+                        </p>
+                        <span class="inline-block bg-amber-800/10 text-amber-900 text-xs px-2 py-1 border border-amber-800/30">завершён (2024)</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Проект 5: Военно-исторические реконструкции -->
+            <article class="bg-white bg-opacity-70 border shadow-sm p-6">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <figure class="md:w-1/3">
+                        <img src="/assets/images/project-reconstruction.jpg" 
+                             alt="Реконструкция боя" 
+                             class="w-full h-auto object-cover mask-torn"
+                             style="height:150px;">
+                        <figcaption class="text-xs italic mt-1 text-stone-600">Реконструкция «Битва за Кавказ»</figcaption>
+                    </figure>
+                    <div class="md:w-2/3">
+                        <h2 class="font-headline text-2xl mb-1">
+                            <span class="vintage-link font-bold">Живая история: реконструкции</span>
+                        </h2>
+                        <p class="text-sm italic text-stone-600 mb-2">Просветительские мероприятия для молодёжи</p>
+                        <p class="mb-3">
+                            Организация военно-исторических фестивалей и реконструкций ключевых сражений на Кавказе. 
+                            Участники — члены отряда, студенты, кадеты. Мероприятия проходят при поддержке Министерства культуры ЧР.
+                        </p>
+                        <span class="inline-block bg-amber-800/10 text-amber-900 text-xs px-2 py-1 border border-amber-800/30">ежегодно</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Призыв поддержать проекты -->
+            <section class="p-6 bg-white bg-opacity-70 border shadow-sm">
+                <h2 class="font-headline text-2xl mb-3 flex items-center gap-2">
+                    <span class="text-amber-800 text-3xl">🤲</span> Поддержать проекты
+                </h2>
+                <p class="mb-4">
+                    Каждый проект нуждается в ресурсах: снаряжение, архивы, лабораторные исследования. 
+                    Если вы хотите помочь делу сохранения памяти, свяжитесь с нами.
+                </p>
+                <a href="/contacts/" class="vintage-button inline-block px-6 py-2 text-sm font-bold uppercase border-2 border-amber-900 bg-amber-800 text-white hover:bg-amber-900 transition">
+                    Стать партнёром
+                </a>
+            </section>
+        </div>
+
+        <!-- Боковая панель (загружается из компонента) -->
+        <aside id="sidebar" class="lg:col-span-1 pt-2"></aside>
+    </main>
+
+    <!-- Футер (загружается из компонента) -->
+    <footer id="footer" class="container mx-auto px-4 py-6 mt-8 text-center text-sm"></footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Патриот95 · Поисковый отряд Чеченской Республики</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="font-body text-ink leading-relaxed">
+
+    <!-- Load from components/header.html -->
+    <header id="header" class="container mx-auto p-4 border-double"></header>
+
+    <main class="container mx-auto p-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Основная колонка: контактная информация и форма -->
+        <div class="lg:col-span-2 space-y-8">
+            
+            <!-- Заголовок страницы -->
+            <section class="p-6 bg-white bg-opacity-70 border shadow-md">
+                <h1 class="font-headline text-4xl mb-4 pb-2 border-b border-dashed">
+                    <img src="/assets/images/icon-quill.png" alt="перо" class="inline-block w-8 h-8 mr-3 align-text-bottom">
+                    Свяжитесь с нами
+                </h1>
+                <p class="text-lg leading-relaxed">
+                    Если вы хотите присоединиться к поисковому движению, сообщить информацию о пропавшем родственнике или предложить помощь — заполните форму или воспользуйтесь контактами ниже.
+                </p>
+            </section>
+
+            <!-- Контактные данные: телефоны, email, адрес -->
+            <section class="p-6 bg-white bg-opacity-70 border shadow-sm grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- телефон -->
+                <div class="flex items-start gap-4">
+                    <span class="text-4xl text-amber-800">☏</span>
+                    <div>
+                        <h2 class="font-headline text-xl font-bold">Телефоны</h2>
+                        <p class="text-lg"><a href="tel:+79287447977" class="vintage-link hover:underline">+7 928 744-79-77</a></p>
+                        <p class="text-lg"><a href="tel:+79637020141" class="vintage-link hover:underline">+7 963 702-01-41</a></p>
+                        <p class="text-sm text-stone-600 mt-1">Руководитель отряда Сардалов И.А.</p>
+                    </div>
+                </div>
+                <!-- email / соцсети -->
+                <div class="flex items-start gap-4">
+                    <span class="text-4xl text-amber-800">✉</span>
+                    <div>
+                        <h2 class="font-headline text-xl font-bold">Электронная почта</h2>
+                        <p><a href="mailto:info@patriot95.ru" class="vintage-link hover:underline">info@patriot95.ru</a></p>
+                        <p class="text-sm text-stone-600 mt-1">Для официальных запросов</p>
+                        <div class="mt-3">
+                            <span class="font-semibold">Мы в соцсетях:</span>
+                            <div class="flex gap-3 mt-1">
+                                <a href="#" class="vintage-link">Telegram</a>
+                                <a href="#" class="vintage-link">VK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- адрес -->
+                <div class="flex items-start gap-4 md:col-span-2">
+                    <span class="text-4xl text-amber-800">⌂</span>
+                    <div>
+                        <h2 class="font-headline text-xl font-bold">Адрес штаба</h2>
+                        <p>Чеченская Республика, г. Грозный, ул. Победы, 15 (офис общественных организаций)</p>
+                        <p class="text-sm text-stone-600 mt-1">По предварительной договорённости мы всегда рады гостям.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Форма обратной связи (винтажный стиль) -->
+            <section class="p-6 bg-white bg-opacity-70 border shadow-md">
+                <h2 class="font-headline text-3xl mb-4 pb-2 border-b border-dashed flex items-center">
+                    <span class="bg-amber-800 w-2 h-6 inline-block mr-3"></span>
+                    Написать нам
+                </h2>
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold uppercase tracking-wider mb-1">Ваше имя</label>
+                            <input type="text" placeholder="Имя" 
+                                class="w-full p-3 border-2 border-amber-900/30 bg-stone-50 focus:bg-white focus:border-amber-700 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold uppercase tracking-wider mb-1">Электронная почта</label>
+                            <input type="email" placeholder="example@mail.ru" 
+                                class="w-full p-3 border-2 border-amber-900/30 bg-stone-50 focus:bg-white focus:border-amber-700 outline-none transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold uppercase tracking-wider mb-1">Тема</label>
+                        <input type="text" placeholder="Например: вопрос по экспедиции" 
+                            class="w-full p-3 border-2 border-amber-900/30 bg-stone-50 focus:bg-white focus:border-amber-700 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold uppercase tracking-wider mb-1">Сообщение</label>
+                        <textarea rows="5" placeholder="Ваш текст..." 
+                            class="w-full p-3 border-2 border-amber-900/30 bg-stone-50 focus:bg-white focus:border-amber-700 outline-none transition"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="vintage-button inline-block px-8 py-3 text-sm font-bold uppercase tracking-wider border-2 border-amber-900 bg-amber-800 text-white hover:bg-amber-900 transition">
+                            Отправить письмо
+                        </button>
+                    </div>
+                    <p class="text-xs text-stone-500 border-t border-dotted pt-2">
+                        Нажимая «Отправить», вы соглашаетесь на обработку персональных данных.
+                    </p>
+                </form>
+            </section>
+
+            <!-- Схема проезда / карта (заглушка) -->
+            <section class="p-6 bg-white bg-opacity-70 border shadow-sm">
+                <h2 class="font-headline text-2xl mb-3 flex items-center gap-2">
+                    <span class="text-amber-800 text-3xl">🗺️</span> Как нас найти
+                </h2>
+                <div class="border-4 border-double border-amber-900/30 p-2 bg-stone-100 h-64 flex items-center justify-center text-stone-500">
+                    [ ЗДЕСЬ БУДЕТ КАРТА ПРОЕЗДА ]
+                </div>
+                <p class="mt-3 text-sm italic">Ориентир: здание Дома общественных организаций, вход со двора, 2-й этаж.</p>
+            </section>
+        </div>
+
+        <!-- Боковая панель (загружается из компонента) -->
+        <aside id="sidebar" class="lg:col-span-1 pt-2"></aside>
+    </main>
+
+    <!-- Футер (загружается из компонента) -->
+    <footer id="footer" class="container mx-auto px-4 py-6 mt-8 text-center text-sm"></footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

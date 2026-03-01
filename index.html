@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная — Поиск-ЧР: Региональное отделение Поискового движения России</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="font-body text-ink leading-relaxed">
+
+    <!-- Load from components/header.html -->
+    <header id="header" class="container mx-auto p-4 border-double "></header>
+
+    <main class="container mx-auto p-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <div class="lg:col-span-2">
+            
+            <section class="mb-8 p-6 bg-white bg-opacity-70 border  shadow-md">
+                <h2 class="font-headline text-3xl mb-4  pb-2 ">
+                    <img src="/assets/images/icon-quill.png" alt="Винтажная иконка пера" class="inline-block w-8 h-8 mr-3 align-text-bottom">
+                    Организация «Поиск-ЧР»: Сохраняя память о Великой Победе
+                </h2>
+                <p class="mb-4 text-lg">
+                    Региональное отделение «Поискового движения России» в Чеченской Республике — это объединение неравнодушных граждан, главной целью которых является увековечение памяти защитников Отечества, погибших в годы Великой Отечественной войны. Наша миссия — находить и с почестями предавать земле останки солдат, устанавливать их имена и возвращать героев из небытия.
+                </p>
+                <div class="border-dashed  my-4 py-4">
+                    <p class="italic">
+                        «Никто не забыт, ничто не забыто» — наш бессменный девиз и ежедневная работа.
+                    </p>
+                </div>
+                <a href="about.html" class="vintage-button inline-block mt-4 text-sm font-bold uppercase hover:bg-opacity-80">
+                    Подробнее о нас и нашей работе
+                </a>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="font-headline text-3xl mb-4  pb-2 ">
+                    Последние Новости с Фронта Памяти
+                </h2>
+                
+                <article class="flex flex-col md:flex-row mb-6 pb-6">
+                    <figure class="md:w-1/3 mb-4 md:mb-0 md:mr-6">
+                        <img src="/assets/images/memorial-ceremony.jpg"
+                            alt="Церемония перезахоронения останков солдата ВОВ"
+                            class="w-full h-auto object-cover mask-torn"
+                            style="height:200px;">
+                        <figcaption class="text-xs italic mt-1">Фото: Церемония в честь найденного героя</figcaption>
+                    </figure>
+                    <div class="md:w-2/3">
+                        <h3 class="font-headline text-2xl mb-2 hover:underline"><a href="news-detail.html?id=1" class="vintage-link">
+                            Успешное завершение Вахты Памяти «Терек-2024»
+                        </a></h3>
+                        <p class="text-sm italic mb-2">Опубликовано: 25 Октября 2024</p>
+                        <p>
+                            В ходе весенней экспедиции были обнаружены и подняты останки 12 бойцов Красной Армии. Благодаря кропотливой работе, удалось установить имя одного из них. Родственники оповещены. Полный фотоотчет и список находок...
+                        </p>
+                        <a href="news-detail.html?id=1" class="text-sm vintage-link font-bold mt-2 inline-block">Читать далее &raquo;</a>
+                    </div>
+                </article>
+                
+                <article class="mb-4 pb-4  border-dotted ">
+                    <h3 class="font-headline text-xl mb-1 hover:underline"><a href="news-detail.html?id=2" class="vintage-link">
+                        Поисковики приняли участие в форуме «Наследие Победителей»
+                    </a></h3>
+                    <p class="text-sm italic mb-2">Опубликовано: 18 Октября 2024</p>
+                    <p class="text-sm">
+                        Представители нашего отделения выступили с докладом о специфике поисковой работы на Кавказе и представили новые методики...
+                    </p>
+                </article>
+
+                <a href="news.html" class="vintage-button inline-block mt-4 text-sm font-bold uppercase">
+                    Архив Всех Новостей
+                </a>
+            </section>
+            
+        </div>
+
+        <!-- Load from components/sidebar.html -->
+        <aside id="sidebar" class="lg:col-span-1 pt-2"></aside>
+    </main>
+
+    <!-- Load from components/footer.html -->
+    <footer id="footer" class="container mx-auto px-4 py-6 mt-8 text-center text-sm"></footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
