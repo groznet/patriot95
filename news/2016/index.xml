@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Вау архивы из 2016 года on Patriot95 - Поисковые работы</title>
+    <link>http://localhost:1313/news/2016/</link>
+    <description>Recent content in Вау архивы из 2016 года on Patriot95 - Поисковые работы</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Nov 2016 03:57:11 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/news/2016/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post 2</title>
+      <link>http://localhost:1313/news/2016/11/post-2/</link>
+      <pubDate>Tue, 29 Nov 2016 03:57:11 +0300</pubDate>
+      <guid>http://localhost:1313/news/2016/11/post-2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post 1</title>
+      <link>http://localhost:1313/news/2016/11/post-1/</link>
+      <pubDate>Tue, 15 Nov 2016 03:55:50 +0300</pubDate>
+      <guid>http://localhost:1313/news/2016/11/post-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post 1</title>
+      <link>http://localhost:1313/news/2016/09/post-1/</link>
+      <pubDate>Fri, 30 Sep 2016 03:47:35 +0300</pubDate>
+      <guid>http://localhost:1313/news/2016/09/post-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post 2</title>
+      <link>http://localhost:1313/news/2016/09/post-2/</link>
+      <pubDate>Fri, 30 Sep 2016 03:47:35 +0300</pubDate>
+      <guid>http://localhost:1313/news/2016/09/post-2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post 1</title>
+      <link>http://localhost:1313/news/2016/06/post-1/</link>
+      <pubDate>Tue, 07 Jun 2016 03:29:20 +0300</pubDate>
+      <guid>http://localhost:1313/news/2016/06/post-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post 1</title>
+      <link>http://localhost:1313/news/2016/01/post-1/</link>
+      <pubDate>Fri, 15 Jan 2016 03:28:47 +0300</pubDate>
+      <guid>http://localhost:1313/news/2016/01/post-1/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,57 @@
+/* Использование винтажного шрифта (замените на реальный шрифт при развертывании) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap');
+.font-headline { font-family: 'Playfair Display', serif; } /* Для заголовков */
+.font-body { font-family: 'Merriweather', serif; } /* Для основного текста */
+
+/* Фон "старой газеты" */
+body {
+    background-image: url('/images/texture-parchment.jpg'); /* Имитация пожелтевшей бумаги */
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Эффект "печатного текста" */
+.text-ink {
+    color: #3e3831; /* Темно-коричневый, как старые чернила */
+}
+
+/* Стиль ссылок и кнопок - имитация печатного акцента */
+.vintage-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #a0522d; /* Цвет сепии */
+}
+.vintage-button {
+    border: 2px solid #a0522d;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+.vintage-button:hover {
+    background-color: rgba(160, 82, 45, 0.1);
+}
+
+/* Настройка полосы прокрутки для навигации */
+nav::-webkit-scrollbar {
+    height: 3px;
+}
+
+nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background: currentColor;
+}
+/* End: Настройка полосы прокрутки для навигации */
+
+/* Эффект "разорванного края" */
+.mask-torn {
+    -webkit-mask-image: url('/images/torn-mask.png');
+    mask-image: url('/images/torn-mask.png');
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
