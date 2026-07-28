@@ -14,7 +14,7 @@
         {{ range .Site.Menus.main }}
             <li>
                 <a href="{{ .URL | relURL }}"
-                   class="vintage-link {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}font-bold{{ end }}">
+                   class='vintage-link {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}font-bold{{ end }}'>
                     {{ .Name }}
                 </a>
             </li>
