@@ -1,0 +1,23 @@
+<div class="flex flex-col md:flex-row justify-between items-center mb-4">
+    <div>
+        <h1 class="font-headline italic text-4xl md:text-6xl text-center md:text-left text-ink mb-2 md:mb-0">
+            <a href="/">Патриот<span class="text-[#a0522d]">95</span></a>
+        </h1>
+        <p class="mt-4">Возвращаем имена павшим защитникам Отечества, сохраняя историческую правду и память для будущих поколений.</p>                
+    </div>
+    <img src="/images/icon-oil-lamp.png" alt="Винтажная иконка масляной лампы" class="hidden md:inline-block w-12">
+</div>
+
+<!-- Main Navigation -->
+<nav class="py-2 overflow-x-scroll">
+    <ul class="flex space-x-4 md:space-x-8 whitespace-nowrap text-lg">
+        {{ range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL | relURL }}"
+                   class="vintage-link {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}font-bold{{ end }}">
+                    {{ .Name }}
+                </a>
+            </li>
+        {{ end }}
+    </ul>
+</nav>

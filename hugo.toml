@@ -1,0 +1,100 @@
+baseURL = "https://patriot95.ru/"
+languageCode = "ru-ru"
+title = "Patriot95 - Поисковые работы"
+theme = "patriot95"
+
+# Performance & SEO
+[pagination]
+  pagerSize = 10
+enableRobotsTXT = true
+summaryLength = 70
+disableKinds = [] 
+
+# Build Options
+[build]
+  publishResources = true
+  # Note: buildDrafts/buildFuture are usually handled via CLI flags 
+  # (e.g., hugo -D), but you can keep them here:
+  renderDrafts = false
+  renderFuture = false
+
+[params]
+  siteName = "My Hugo Site"
+  siteDescription = "Modern static website built with Hugo"
+  author = "Kerim"
+  copyright = "© 2026 GrozNet"
+  dateFormat = "Jan 2, 2006"
+  
+  # Contact info (Nested under params)
+  email = "info@example.com"
+  phone = "+7 (000) 000-00-00"
+  address = "Grozny, Chechnya"
+
+# Social Links (Correct List Syntax)
+[[params.social]]
+  name = "Facebook"
+  icon = "facebook"
+  url = "https://facebook.com/example"
+
+[[params.social]]
+  name = "GitHub"
+  icon = "github"
+  url = "https://github.com/groznet"
+
+# Appearance
+[params.theme]
+  layout = "default"
+  colorScheme = "light"
+  logo = "/images/logo.png"
+
+# Menus (Correct List Syntax)
+# Main Navigation Menu
+[[menus.main]]
+    name = "Главная"
+    pageRef = "/"
+    weight = 10
+
+[[menus.main]]
+    name = "Проекты"
+    pageRef = "/projects"
+    weight = 20
+
+[[menus.main]]
+    name = "Новости"
+    pageRef = "/news"
+    weight = 30
+
+[[menus.main]]
+    name = "Отчеты"
+    pageRef = "/reports"
+    weight = 40
+
+[[menus.main]]
+    name = "Партнеры"
+    pageRef = "/partners"
+    weight = 50
+
+[[menus.main]]
+    name = "Документы"
+    pageRef = "/documents"
+    weight = 60
+
+[[menus.main]]
+    name = "О Нас"
+    pageRef = "/about"
+    weight = 70
+
+[[menus.main]]
+    name = "Контакты"
+    pageRef = "/contact"
+    weight = 80
+
+# Multilingual
+[languages.en]
+  languageName = "English"
+  weight = 1
+
+[languages.ru]
+  languageName = "Русский"
+  weight = 2
+  title = "Мой сайт на Hugo"

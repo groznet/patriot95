@@ -1,0 +1,67 @@
+{{ define "main" }}
+    {{ range first 1 (where .Site.RegularPages "Section" "news") }}
+        <section class="mb-8 p-4 bg-white bg-opacity-70 border shadow-md">
+            <h2 class="font-headline text-3xl mb-4 pb-2">
+                <img src="/images/icon-quill.png" alt="Винтажная иконка пера" class="inline-block w-8 h-8 align-text-bottom">
+                {{ .Title }}
+            </h2>
+            
+            <div class="text-lg">
+                {{ .Summary | truncate 350 }}
+            </div>
+
+            <div class="border-t border-dashed">
+                <p class="italic text-stone-600">
+                    Опубликовано: {{ .Date.Format "02.01.2006" }}
+                </p>
+            </div>
+
+            <a href="{{ .RelPermalink }}" class="vintage-button inline-block text-sm font-bold uppercase hover:bg-opacity-80 px-4 py-2 text-amber-900">
+                Читать полностью
+            </a>
+        </section>
+    {{ end }}
+
+    <section class="mb-8">
+        <h2 class="font-headline text-3xl mb-4 pb-2">
+            Недавние Новости
+        </h2>
+        
+        {{/* Skip the first post (already featured) and show the next 2 */}}
+        {{ range first 2 (after 1 (where .Site.RegularPages "Section" "news")) }}
+        <article class="flex flex-col md:flex-row mb-6 pb-6 border-b border-dotted last:border-0">
+            <figure class="md:w-1/3 m-0 mb-4 md:mb-0 md:mr-6">
+                {{/* Using your logic to find the first available image */}}
+                {{ $images := .Resources.ByType "image" }}
+                {{ $img := index $images 0 }}
+                
+                {{ if $img }}
+                    <img src="{{ $img.RelPermalink }}"
+                        alt="{{ .Title }}"
+                        class="w-full h-auto object-cover mask-torn"
+                        style="height:200px;">
+                {{ else }}
+                    <div class="w-full bg-stone-100 border flex items-center justify-center text-stone-400 italic" style="height:200px;">
+                        Нет фото
+                    </div>
+                {{ end }}
+                <figcaption class="text-xs italic mt-1">{{ .Params.caption | default .Title }}</figcaption>
+            </figure>
+
+            <div class="md:w-2/3">
+                <h3 class="font-headline text-2xl mb-2 mt-0 hover:underline">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h3>
+                <p class="text-sm italic mb-2">Опубликовано: {{ .Date.Format "02.01.2006" }}</p>
+                {{ .Summary | truncate 220 }}
+                <a href="{{ .RelPermalink }}" class="text-sm vintage-link font-bold inline-block">Читать далее &raquo;</a>
+            </div>
+        </article>
+        {{ end }}
+
+        <a href="/news" class="vintage-button inline-block mt-4 text-sm font-bold uppercase hover:bg-opacity-80 px-4 py-2 bg-amber-900 text-white">
+            Архив Всех Новостей
+        </a>
+    </section>    
+
+{{ end }}

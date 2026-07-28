@@ -1,0 +1,51 @@
+{{ define "main" }}
+    <article class="p-6 bg-white bg-opacity-70 border shadow-md">
+        <header class="mb-6 border-b pb-4">
+            <h1 class="font-headline text-4xl mb-2">{{ .Title }}</h1>
+            <p class="text-sm italic text-gray-600">
+                Опубликовано: {{ .Date.Format "02.01.2006" }}
+            </p>
+        </header>
+
+        <figure class="m-0 w-full">
+            {{/* Grab all images in the post bundle and pick the first one */}}
+            {{ $images := .Resources.ByType "image" }}
+            {{ $img := index $images 0 }}
+            
+            {{ if $img }}
+                <img src="{{ $img.RelPermalink }}" 
+                    alt="{{ .Title }}" 
+                    class="w-full h-auto object-cover mask-torn">
+            {{ else }}
+                <div class="w-full bg-stone-100 border border-dotted flex items-center justify-center text-stone-400 italic" style="height:160px;">
+                    Нет фото
+                </div>
+            {{ end }}
+            <figcaption class="text-xs italic mt-1 text-stone-600">
+                {{ .Params.caption | default .Title }}
+            </figcaption>
+        </figure>
+
+        <div class="prose max-w-none text-lg leading-relaxed mb-12">
+            {{ .Content }}
+        </div>
+
+        {{ $images := .Resources.Match "images/*" }}
+        {{ if $images }}
+        <section class="mt-12">
+            <h3 class="font-headline text-2xl mb-6 border-dotted border-b pb-2">Фотоархив экспедиции</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {{ range $images }}
+                <a href="{{ .RelPermalink }}" target="_blank" class="block overflow-hidden border p-1 bg-white hover:shadow-md transition">
+                    <img src="{{ .RelPermalink }}" alt="Архивное фото" class="w-full h-48 object-cover">
+                </a>
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
+
+        <footer class="mt-10 pt-6 border-t">
+            <a href="/news" class="vintage-link font-bold">&laquo; Вернуться к новостям</a>
+        </footer>
+    </article>
+{{ end }}

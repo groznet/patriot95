@@ -1,0 +1,21 @@
+# Hugo generated files
+/public/
+/resources/
+/.hugo_build.lock
+# Node
+node_modules/
+
+# Ignore all images and videos inside the content directory and its subdirectories
+/content/**/*.jpg
+/content/**/*.jpeg
+/content/**/*.png
+/content/**/*.webp
+/content/**/*.gif
+/content/**/*.svg
+/content/**/*.mp4
+/content/**/*.webm
+/content/**/*.mov
+/content/**/*.avi
+
+# Ignore any content images folders
+/content/**/images/
