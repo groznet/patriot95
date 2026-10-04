@@ -31,12 +31,11 @@
         {{ range first 2 (after 1 (where .Site.RegularPages "Section" "news")) }}
         <article class="flex flex-col md:flex-row mb-6 pb-6 border-b border-dotted last:border-0">
             <figure class="md:w-1/3 m-0 mb-4 md:mb-0 md:mr-6">
-                {{/* Using your logic to find the first available image */}}
-                {{ $images := .Resources.ByType "image" }}
-                {{ $img := index $images 0 }}
+                {{/* Same image resolution as news/list.html (gallery.json via shared partial) */}}
+                {{ $imgSrc := partial "featured-image.html" . }}
                 
-                {{ if $img }}
-                    <img src="{{ $img.RelPermalink }}"
+                {{ if $imgSrc }}
+                    <img src="{{ $imgSrc }}"
                         alt="{{ .Title }}"
                         class="w-full h-auto object-cover mask-torn"
                         style="height:200px;">

@@ -20,27 +20,8 @@
                 
                 <!-- Pick the first available image regardless of its filename (not specifically "featured" -->
                 <figure class="m-0 md:w-1/3">
-                    {{/* 1. Try reading gallery.json dynamically */}}
-                    {{ $gallery := dict }}
-                    {{ $galleryPath := printf "%s/gallery.json" .File.Dir }}
-                    {{ if fileExists $galleryPath }}
-                        {{ $gallery = unmarshal (readFile $galleryPath) }}
-                    {{ end }}
-
-                    {{/* 2. Resolve image source: gallery.json -> featured_image OR first image in images array OR page bundle resource */}}
-                    {{ $imgSrc := "" }}
-                    {{ if $gallery.featured_image }}
-                        {{ $imgSrc = $gallery.featured_image }}
-                    {{ else if and $gallery.images $gallery.remote_base_url }}
-                        {{ $firstImg := index $gallery.images 0 }}
-                        {{ $imgSrc = printf "%s%s" $gallery.remote_base_url $firstImg }}
-                    {{ else }}
-                        {{ $images := .Resources.ByType "image" }}
-                        {{ $bundleImg := index $images 0 }}
-                        {{ if $bundleImg }}
-                            {{ $imgSrc = $bundleImg.RelPermalink }}
-                        {{ end }}
-                    {{ end }}
+                    {{/* 1-2. Resolve image source via shared partial (gallery.json -> featured_image OR first image in images array OR page bundle resource) */}}
+                    {{ $imgSrc := partial "featured-image.html" . }}
 
                     {{/* 3. Render image or fallback placeholder */}}
                     {{ if $imgSrc }}
